@@ -1,0 +1,19 @@
+description: Snort Bundle
+bundle: kubernetes
+applications:
+  squid:
+    charm: ./charms/snort-operator
+    scale: 1
+    options:
+      enable-exporter: true
+  # prometheus:
+  #   charm: ./charms/prometheus-operator
+  #   scale: 1
+  # grafana:
+  #   charm: ./charms/grafana-operator
+  #   scale: 1
+# relations:
+# - - prometheus:target
+#   - squid:prometheus-target
+# - - grafana:grafana-source
+#   - prometheus:grafana-source
